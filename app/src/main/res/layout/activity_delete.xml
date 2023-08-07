@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DeleteActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/cardView"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:hint="Enter Employee Id"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"
+                android:id="@+id/idEditText"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:background="@color/white"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/idSearch"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:contentDescription="null"
+                android:src="@drawable/baseline_search_24" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/msgTextView"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

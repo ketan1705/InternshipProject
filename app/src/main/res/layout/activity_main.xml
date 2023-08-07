@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/cityNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="City Name: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/loginTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="Login Time: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/loginTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:id="@+id/view"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_height="2dp"
+        android:background="@drawable/divider_line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:fitsSystemWindows="true"
+        android:id="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Actions"
+        app:icon="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/baseline_add_24"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/floating"
+        app:layout_constraintEnd_toEndOf="@+id/floating" />
+    <TextView
+        android:id="@+id/add_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Add User"
+        app:layout_constraintBottom_toBottomOf="@+id/add_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_fab" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/update_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:fabSize="normal"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_fab" />
+    <TextView
+        android:id="@+id/update_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="@+id/update_fab"
+        app:layout_constraintEnd_toStartOf="@+id/update_fab"
+        app:layout_constraintTop_toTopOf="@+id/update_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/empDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:fabSize="normal"
+        android:src="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toTopOf="@+id/update_fab"
+        app:layout_constraintEnd_toEndOf="@+id/update_fab"
+        app:layout_constraintStart_toStartOf="@+id/update_fab" />
+
+    <TextView
+        android:id="@+id/detail_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Detail"
+        app:layout_constraintBottom_toBottomOf="@+id/empDetail"
+        app:layout_constraintEnd_toStartOf="@+id/empDetail"
+        app:layout_constraintTop_toTopOf="@+id/empDetail" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/empDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:fabSize="normal"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/empDetail"
+        app:layout_constraintEnd_toEndOf="@+id/empDetail"
+        app:layout_constraintStart_toStartOf="@+id/empDetail" />
+    <TextView
+        android:id="@+id/delete_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="@+id/empDelete"
+        app:layout_constraintEnd_toStartOf="@+id/empDelete"
+        app:layout_constraintTop_toTopOf="@+id/empDelete" />
+
+    <!-- res/layout/activity_home.xml -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_item"
+        app:title="@string/app_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
