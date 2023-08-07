@@ -1,7 +1,6 @@
 package android.com.destek.demoproject1;
 
 import android.com.destek.demoproject1.model.EmployeeUserModel;
-import android.com.destek.demoproject1.model.UserModel;
 
 public class EmployeeCreateResponse {
     private String status;

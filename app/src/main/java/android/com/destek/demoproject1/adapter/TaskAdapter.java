@@ -46,9 +46,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         return arrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView recyclerTaskTxt,recyclerDateTxt,recyclerTimeTxt;
+        TextView recyclerTaskTxt;
+        TextView recyclerDateTxt;
+        TextView recyclerTimeTxt;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 

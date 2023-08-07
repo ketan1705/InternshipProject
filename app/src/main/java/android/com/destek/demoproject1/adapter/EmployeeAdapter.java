@@ -14,7 +14,6 @@ import java.util.List;
 
 public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.EmployeeViewHolder> {
 
-    public List<EmployeeModel> employeeViewModel;
     List<EmployeeModel> employeeModelList;
 
     public EmployeeAdapter(List<EmployeeModel> employeeModelList) {
@@ -42,9 +41,11 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
         return employeeModelList.size();
     }
 
-    public class EmployeeViewHolder extends RecyclerView.ViewHolder {
+    public static class EmployeeViewHolder extends RecyclerView.ViewHolder {
 
-        TextView empName,empSalary,empAge;
+        TextView empName;
+        TextView empSalary;
+        TextView empAge;
 
         public EmployeeViewHolder(@NonNull View itemView) {
             super(itemView);
